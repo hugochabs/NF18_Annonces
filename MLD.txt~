@@ -1,12 +1,12 @@
 
-Utilisateur(#mail : varchar, password : varchar, prenom : varchar, nom : varchar, tel : varchar, UT : {Compiegne, Troyes, Belfort-Montbeliard}) avec (prenom, nom, UT) NOT NULL, (password) UNIQUE
+Utilisateur(#mail : varchar, password : varchar, prenom : varchar, nom : varchar, tel : varchar, UT : {Compiegne, Troyes, Belfort-Montbeliard}) avec (prenom, nom, UT) NOT NULL
 Etudiant(#user=>utilisateur(id), semestre : varchar, branche : varchar) avec (semestre, branche) NOT NULL
 Professeur(#user=>utilisateur(id), domaine : varchar) avec (domaine) NOT NULL
 Administration(#user=>utilisateur(id), poste : varchar) avec (poste) NOT NULL
 
 Theme(#intituleThemes : varchar)
 Categories(#intituleCat : varchar, theme=>theme(intitule))
-Annonce(#id : integer, prix : integer, titre : varchar, description : varchar, user=>utilisateur(id), cat=>categories(intitule))
+Annonce(#id : integer, prix : integer, titre : varchar, description : varchar, dateAjout: date, user=>utilisateur(id), cat=>categories(intitule), valide : bool) avec (titre, prix, description, valide) NOT NULL
 Validation (#annonce=>Annonce(id), valide : boolean) avec valide NOT NULL
 Photo(#annonce=>Annonce(id), directory : varchar) avec directory NOT NULL
 Commentaire(#id : integer, objet : varchar, texte : varchar, date : date, #annonce=>annonce(id), user=>utilisateur(id), reponse=>commentaire(id)) avec (annonce) local key
