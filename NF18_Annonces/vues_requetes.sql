@@ -1,3 +1,5 @@
+
+
 CREATE VIEW vueEtudiant AS
 SELECT mail, prenom, nom, tel, UT, semestre, branche FROM
 Utilisateur U INNER JOIN Etudiant E ON
@@ -48,12 +50,27 @@ CREATE VIEW BelfortCityMaggle AS
 SELECT * FROM
 Annonce A INNER JOIN Utilisateur U ON
 A.user = U.mail
-WHERE U.UT = 'Belfort-Montbelliard';
+WHERE U.UT = 'Belfort-Montbelliard'
+
+CREATE VIEW CategX AS
+SELECT * FROM
+Categorie C
+WHERE C.intituleCat = 'X';
+
+CREATE VIEW ThemeX AS
+SELECT * FROM
+Theme T
+WHERE T.intituleTheme = 'X';
+
+CREATE VIEW VueCoordsAnnonce AS
+SELECT mail, tel FROM
+Utilisateur U INNER JOIN Annonce A ON
+U.mail = A.mail;
+
 
 
 CREATE USER Admin WITH PASSWORD = 'admin';
 GRANT ALL PRVILEGES ON * TO Admin [WITH GRANT OPTION];
-
 
 CREATE USER ? WITH PASSWORD = ?;
 GRANT SELECT ON Annonces, Photo, Commentaire TO ?;
