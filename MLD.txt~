@@ -9,7 +9,7 @@ Categories(#intituleCat : varchar, theme=>theme(intitule))
 Annonce(#id : integer, prix : integer, titre : varchar, description : varchar, user=>utilisateur(id), cat=>categories(intitule))
 Validation (#annonce=>Annonce(id), valide : boolean) avec valide NOT NULL
 Photo(#annonce=>Annonce(id), directory : varchar) avec directory NOT NULL
-Commentaire(#id : integer, objet : varchar, texte : varchar, date : date, #annonce=>annonce(id), user=>utilisateur(id), reponse=>commentaire(id)) avec (annonce) local key
+Commentaire(#id : integer, objet : varchar, texte : varchar, date : date, #annonce=>annonce(id), user=>utilisateur(id), reponse=>commentaire(id)) avec (annonce) local keys
 
 
 Contraintes : 
