@@ -1,5 +1,5 @@
 
-Utilisateur(#mail : varchar, password : varchar, prenom : varchar, nom : varchar, tel : varchar, UT : {Compiegne, Troyes, Belfort-Montbeliard}) avec (prenom, nom, UT) NOT NULL, (password) UNIQUE
+Utilisateur(#mail : varchar, password : varchar, prenom : varchar, nom : varchar, tel : varchar, UT : {Compiegne, Troyes, Belfort-Montbeliard}) avec (prenom, nom, UT) NOT NULL
 Etudiant(#user=>utilisateur(id), semestre : varchar, branche : varchar) avec (semestre, branche) NOT NULL
 Professeur(#user=>utilisateur(id), domaine : varchar) avec (domaine) NOT NULL
 Administration(#user=>utilisateur(id), poste : varchar) avec (poste) NOT NULL
