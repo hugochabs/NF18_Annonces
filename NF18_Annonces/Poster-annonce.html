@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<body> 
+
+<head>
+		<title> Ajout d'une annonce </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	
+<body>
+	<h1> <b> Création d'une annonce en cours ... </b> </h1>
+
+	<p> Merci de renseigner au minimum tous les champs * qui sont obligatoires pour une annonce complet.</p>
+	
+
+	<form method="post" action="Poster-annonce.php">
+
+	  <p> Catégorie* : </p> <SELECT name="cat" size="1">
+			     	<OPTION> Polys
+			     	<OPTION> Annales
+			     	<OPTION> Meubles
+			     	<OPTION> Electroménager
+			     	<OPTION> Appartement
+			     	<OPTION> Cours particuliers
+			     	<OPTION> Billeterie
+			     	</SELECT> <br>
+
+
+
+	  <p> Titre* : </p> <input type="text" name="title"/>
+	  <p> Description* : </p> <input type="text" name="desc"/> 
+	  <p> Prix* : </p> <input type="text" name="price"/> <br>
+	  <p> Upload photos 1 : </p> <input type="text" name="tof1"/>
+	  <p> Upload photos 2 : </p> <input type="text" name="tof2"/>
+	  <p> Upload photos 3 : </p> <input type="text" name="tof3"/> <br> <br> <br>
+
+	  <input type="submit"/>
+
+
+	</form>
+
+</body>
+
+</html>
