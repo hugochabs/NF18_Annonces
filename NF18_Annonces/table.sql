@@ -4,7 +4,8 @@ CREATE TABLE Utilisateur (
 	prenom VARCHAR(25) NOT NULL,
 	nom VARCHAR(25) NOT NULL,
 	UT VARCHAR(20) NOT NULL,
-	tel varchar(10)
+	tel varchar(10),
+	CHECK (UT in ('Compiègne', 'Troyes', 'Belfort-Montbéliard'))
 );
 
 
@@ -42,7 +43,7 @@ CREATE TABLE Annonce(
 	dateAjout DATE NOT NULL,
 	valide BOOLEAN NOT NULL,
 	user VARCHAR REFERENCES Utilisateur(mail),
-	cat VARCHAR(50) REFERENCES Categories(intituleCat) NOT NULL
+	cat VARCHAR(50) REFERENCES Categories(intituleCat)
 );
 
 CREATE TABLE Photo (
@@ -59,6 +60,13 @@ CREATE TABLE Commentaire (
 	user VARCHAR Utilisateur(mail),
 	reponse INTEGER REFERENCES Commentaire(id)
 );
+
+
+INSERT INTO Utilisateur VALUES 
+('hugo-chabin@laposte.net', 'password1', 'Hugo', 'Chabin', 'Compiegne', '0629847323'),
+('guillaume-le-fur@gmail.com', 'password2', 'guillaume', 'Le fur', 'Compiegne', '0629564156'),
+('arielle.tinchon@gmail.com', 'password3', 'Arielle', 'Tinchon', 'Compiegne', '0606060606');
+
 
 
 
