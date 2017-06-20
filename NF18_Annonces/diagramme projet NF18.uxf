@@ -4,18 +4,17 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>160</y>
+      <x>790</x>
+      <y>170</y>
       <w>340</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>/&lt;&lt;Utilisateur&gt;&gt;/ {abstract}
 --
--id : int {key}
+-mail : varchar {key}
+-password : varchar
 -prenom : varchar
 -nom : varchar
--mail : varchar
--password : varchar
 -tel : varchar
 -UT : {Compiègne, Troyes, Belfort-Montbeliard}
 --</panel_attributes>
@@ -24,8 +23,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>510</y>
+      <x>630</x>
+      <y>520</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -38,8 +37,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>510</y>
+      <x>880</x>
+      <y>520</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -52,8 +51,8 @@ semestre : varchar
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>320</y>
+      <x>730</x>
+      <y>330</y>
       <w>270</w>
       <h>210</h>
     </coordinates>
@@ -63,8 +62,8 @@ semestre : varchar
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>320</y>
+      <x>970</x>
+      <y>330</y>
       <w>50</w>
       <h>210</h>
     </coordinates>
@@ -74,27 +73,27 @@ semestre : varchar
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>150</y>
+      <x>390</x>
+      <y>160</y>
       <w>210</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Annonce&gt;&gt;
 --
--id: int {key}
--prix : int
--titre : varchar
--description : varchar
+-prix : int NOT NULL
+-titre : varchar NOT NULL
+-description : varchar NOT NULL
 -photo{1..3} : varchar
--statut : {vendu, en vente}
+-statut : {vendu, en vente} NOT NULL
+-valide : bool NOT NULL
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>210</y>
+      <x>590</x>
+      <y>220</y>
       <w>220</w>
       <h>50</h>
     </coordinates>
@@ -107,8 +106,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>390</y>
+      <x>370</x>
+      <y>400</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -121,8 +120,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>570</y>
+      <x>370</x>
+      <y>580</y>
       <w>230</w>
       <h>70</h>
     </coordinates>
@@ -135,8 +134,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>280</y>
+      <x>470</x>
+      <y>290</y>
       <w>50</w>
       <h>130</h>
     </coordinates>
@@ -149,8 +148,8 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>450</y>
+      <x>470</x>
+      <y>460</y>
       <w>30</w>
       <h>140</h>
     </coordinates>
@@ -161,14 +160,13 @@ bg=black</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>180</y>
+      <x>90</x>
+      <y>190</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Commentaire&gt;&gt;
 --
--id : int
 -objet : varchar
 -texte : varchar
 -date : date
@@ -178,8 +176,8 @@ bg=black</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>90</y>
+      <x>180</x>
+      <y>100</y>
       <w>760</w>
       <h>110</h>
     </coordinates>
@@ -192,8 +190,8 @@ m2=0..1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>220</y>
+      <x>290</x>
+      <y>230</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -204,8 +202,8 @@ bg=black</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>220</y>
+      <x>10</x>
+      <y>230</y>
       <w>190</w>
       <h>130</h>
     </coordinates>
@@ -218,8 +216,8 @@ repond &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>510</y>
+      <x>1110</x>
+      <y>520</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -232,8 +230,8 @@ poste : varchar
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>320</y>
+      <x>970</x>
+      <y>330</y>
       <w>270</w>
       <h>210</h>
     </coordinates>
@@ -243,37 +241,8 @@ poste : varchar
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>0</y>
-      <w>210</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Données confidentielles&gt;&gt;
---
-login : varchar {key}
-password : varchar
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1110</x>
-      <y>60</y>
-      <w>110</w>
-      <h>220</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-possède &gt;</panel_attributes>
-    <additional_attributes>10.0;190.0;90.0;190.0;90.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>610</x>
-      <y>370</y>
+      <x>620</x>
+      <y>380</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -287,8 +256,8 @@ possède &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>270</y>
+      <x>590</x>
+      <y>280</y>
       <w>200</w>
       <h>120</h>
     </coordinates>
