@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<body> 
+
+<head>
+		<title> UT-troc </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	
+<body>
+	<h1> <b> Inscription en cours ... </b> </h1>
+
+	<p> Merci de renseigner au minimum tous les champs * qui sont obligatoires pour un profil complet.</p>
+	
+
+
+	<form method="post" action="Inscription.php">
+
+	  <p> Etablissement* : </p> <SELECT name="UT" size="1">
+				    <OPTION> UTC 
+				    <OPTION> UTT
+				    <OPTION> UTBM
+				    </SELECT>
+	  <p> Statut* : </p> <SELECT name="statut" size="1">
+			     <OPTION> Etudiant
+			     <OPTION> Professeur
+			     <OPTION> Administration
+			     </SELECT> <br> 
+		
+
+	  <p> Nom* : </p> <input type="text" name="nom"/>
+	  <p> Prénom* : </p> <input type="text" name="prenom"/> <br>
+	  <p> Numéro de téléphone : </p> <input type="text" name="tel"/>
+	  <p> Mail* : </p> <input type="text" name="mail"/>
+	  <p> Mot de passe* : </p> <input type="text" name="mdp"/> <br> <br> <br>
+
+	  <p> <i> Si vous êtes étudiant : </i> </p>
+	  <p> Branche* : </p> <SELECT name="branche" size="1">
+			      <OPTION> GI 
+			      <OPTION> IM
+			      <OPTION> GP
+			      <OPTION> GB
+			      <OPTION> GSU
+			      </SELECT>
+
+	  <p> Semestre* : </p> <SELECT name="semestre" size="1">
+			      <OPTION> 01 
+			      <OPTION> 02
+			      <OPTION> 03
+			      <OPTION> 04
+			      <OPTION> 05
+			      <OPTION> 06
+			      <OPTION> 07
+			      <OPTION> 08
+			      <OPTION> 09
+			      <OPTION> 10
+			      </SELECT> <br> <br>
+
+	  <p> <i> Si vous êtes professeur : </i> </p>
+	  <p> Domaine* : </p> <input type="text" name="domaine"/> <br> <br>
+	  <p> <i> Si vous êtes de l'administration : </i> </p>
+	  <p> Poste* : </p> <input type="text" name="poste"/> <br> <br>
+
+	  <input type="submit"/>
+
+
+	</form>
+
+</body>
+
+</html>
