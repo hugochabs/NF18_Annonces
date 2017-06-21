@@ -67,8 +67,7 @@ SELECT mail, tel FROM
 Utilisateur U INNER JOIN Annonce A ON
 U.mail = A.mail;
 
-INSERT INTO Utilisateur VALUES
-(?, ?, ?, ?, ?, ?);
+
 
 CREATE USER Admin WITH PASSWORD = 'admin';
 GRANT ALL PRVILEGES ON * TO Admin [WITH GRANT OPTION];
