@@ -1,5 +1,5 @@
 CREATE TABLE Utilisateur (
-	mail VARCHAR PRIMARY KEY,
+	mail VARCHAR PRIMARY KEY, 
 	password VARCHAR(8),
 	prenom VARCHAR(25) NOT NULL,
 	nom VARCHAR(25) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE Utilisateur (
 
 
 CREATE TABLE Etudiant (
-	user VARCHAR,
+	user VARCHAR, 
 	semestre VARCHAR NOT NULL,
 	branche VARCHAR NOT NULL,
 	FOREIGN KEY(user) REFERENCES Utilisateur(mail)
@@ -53,15 +53,9 @@ CREATE TABLE Photo (
 );
 
 CREATE TABLE Commentaire (
-<<<<<<< HEAD
-	id INTEGER(15) PRIMARY KEY,
-	objet VARCHAR(50) NOT NULL,
-	texte VARCHAR NOT NULL,
-=======
 	id INTEGER(15) NOT NULL,
 	objet VARCHAR(50) NOT NULL, 
 	texte VARCHAR NOT NULL, 
->>>>>>> 8d573a2f917d5f372c40e65712208030ba038ffa
 	dateCration DATE NOT NULL,
 	annonce VARCHAR REFERENCES Annonce(id),
 	user VARCHAR Utilisateur(mail),
@@ -71,31 +65,11 @@ CREATE TABLE Commentaire (
 );
 
 
-INSERT INTO Utilisateur VALUES
+INSERT INTO Utilisateur VALUES 
 ('hugo-chabin@laposte.net', 'password1', 'Hugo', 'Chabin', 'Compiegne', '0629847323'),
 ('guillaume-le-fur@gmail.com', 'password2', 'guillaume', 'Le fur', 'Compiegne', '0629564156'),
 ('arielle.tinchon@gmail.com', 'password3', 'Arielle', 'Tinchon', 'Compiegne', '0606060606');
 
-INSERT INTO Etudiant VALUES
-('hugo-chabin@laposte.net', '02', 'GI'),
-('guillaume-le-fur@gmail.com', '02', 'GI'),
-('arielle.tinchon@gmail.com', '02', 'GI');
-
-INSERT INTO Theme VALUES
-('Locations'),
-('Documents UV')
-
-INSERT INTO Catégories VALUES
-('Appartements','Locations'),
-('Polycopiés', 'Documents UV'),
-('Annales', 'Documents UV');
-
-INSERT INTO Annonce VALUES
-(1, 15,'Polycopié de NF17', 'Polycopié de NF17, assez bon état.', '17/06/2017', 'false', 'guillaume-le-fur@gmail.com', 'Polycopiés');
 
 
-INSERT INTO Photo VALUES
-(1, '/home/guillaume/photos');
 
-INSERT INTO Commentaire VALUES
-('1', 'Précision polycopié', 'Bonjour, pouvez vous apporter des précisions à propos du polycopié (date impression, contenu)', '18/06/2017', 1, 'arielle.tinchon@gmail.com', -1);
